@@ -1,13 +1,31 @@
-import React from "react";
+import Link from "next/link";
 
-const HomePage = () => {
-    return (
-        <div>
-             <h1> welcome to my page </h1>
-            <p> this is my home page </p>
+function Home () {
+  return (
+    <div>
+      <h1 className="font-bold text-2xl py-5 text-black-700">Project Tp Lab Gamma</h1>
 
-        </div>
-    );
+      <Link
+       className="px-3 transition hover:text-red-500 font-bold" style={{ color: "yellow" }}
+       href="/product">
+        Products
+        </Link>
+
+      <Link
+       className="px-3 transition hover:text-teal-500 font-bold" style={{ color: "green" }}
+       href="/MoviesList">
+        Movies
+        </Link>
+
+      <Link
+       className="px-3 transition hover:text-teal-500 font-bold" style={{ color: "blue" }}
+       href="/about">
+        About
+        </Link>
+        
+
+    </div>
+  );
 };
 
-export default HomePage;
+export default Home;
